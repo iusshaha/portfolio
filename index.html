@@ -1,50 +1,97 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>My Portfolio</title>
-	<link rel="stylesheet" type="text/css" href=" Css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="Css/style.css" />
+
 </head>
 <body>
+
 <header>
-	<h1>My Portfolio</h1>
-	<nav>
-		<a href="#about">About</a>
-		<a href="#Education">Education</a>
-		<a href="#contacts">Contacts</a>
-	</nav>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="header-content">
+        <h1>Aayusha</h1>
+        
+        <nav>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#Education">Education</a>
+                <a href="#projects">Projects</a> 
+                <a href="#Contacts">Contacts</a>
+            </div>
+
+            <!-- Added for menu toggle (PDF requirement) -->
+            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
+                ☰
+            </button>
+        </nav>
+
+    </div>
 </header>
+
 <section id="about">
-	<h2>About Me</h2>
-	<img src="Aayusha.png" alt="My Photo">
-	<p>Hello! I am currently learning Web Development and I bult this portfolio using html and css.</p>
+    <h2>About Me</h2>
+    <img src="Aayusha.png" alt="My Photo" />
+    <p>Hello! I am currently learning Web Development and I built this portfolio using HTML,CSS and JavaScript.</p>
 </section>
 
 <section id="Education">
-	<h2>Education History</h2>
-	<p>I am currently studying Bsc(Hons)Computer Science in Herald College Kathmandu. I completec my +2 in science from Uniglobe College Kamaladi.</p>
+    <h2>Education History</h2>
+    <p>I am currently studying BSc(Hons) Computer Science at Herald College Kathmandu. I completed my +2 in Science from Uniglobe College, Kamaladi.</p>
+</section>
+
+<section id="projects" class="section-box">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project">
+      <img src="project1.png" alt="Project 1" />
+      <p>Weather App.</p>
+    </div>
+    <div class="project">
+      <img src="project2.jpeg" alt="Project 2" />
+      <p>Game I made in Unity.</p>
+    </div>
+    <div class="project">
+      <img src="project3.png" alt="Project 3" />
+      <p>Banking System.</p>
+    </div>
+  </div>
 </section>
 
 <section id="Contacts">
-	<h2>Contact Me</h2>
-	<form>
-		<label>Name:</label><br>
-		<input type="text" placeholder="Enter your name" required><br>
+    <h2>Contact Me</h2>
 
-		<label>Email:</label><br>
-		<input type="email" placeholder="Enter your email" required><br>
+    <!-- Added ID for JS compatibility -->
+    <form id="contact-form-id">
+        <label>Name:</label><br />
+        <input type="text" id="name" placeholder="Enter your name" required /><br />
 
-		<label>Message:</label><br>
-		<textarea placeholder="Write your message here..." required></textarea><br>
-		
-		<button type="submit">Send message</button>
-	</form>
+        <label>Email:</label><br />
+        <input type="email" id="email" placeholder="Enter your email" required /><br />
+
+        <label>Message:</label><br />
+        <textarea id="message" placeholder="Write your message here..." required></textarea><br />
+
+        <button type="submit">Send message</button>
+    </form>
+
+    <div id="form-message"></div>
 </section>
 
 <footer>
-	<span>&copy; 2025 Aayushaa</span>
+    <span>&copy; 2025 Aayushaa</span>
 </footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
